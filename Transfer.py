@@ -8,9 +8,9 @@ def listen(port):
 
 def receive():
 	lis, addr = l_socket.accept()
-	s = lis.recv( 1024 ).decode("UTF-8")
+	s = lis.recv(1024).decode("UTF-8")
 	lis.close()
-	print(s)
+	return s
 
 def send(dest, port, data_to_send):
 	s_socket = socket.socket( socket.AF_INET, socket.SOCK_STREAM )
